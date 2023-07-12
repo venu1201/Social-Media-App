@@ -10,6 +10,7 @@ const Home = () => {
     <div className='w-full mt-2 px-5 h-full flex'>
         <Posts/>
         <Features/>
+        hey
     </div>
     <Footer />
     </>
