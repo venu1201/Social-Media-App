@@ -1,11 +1,11 @@
 import React from 'react'
-
+import Suggestions from './components/Suggestions.jsx'
+import Profilesection from './components/Profilesection.jsx'
 const Features = () => {
   return (
-    <div className='w-[30%] h-[100vh] flex justify-center items-center'>
-        <div>
-          Features
-        </div>
+    <div className='w-[30%] gap-4 p-2 h-[100vh] flex flex-col'>
+      <Profilesection/>
+      <Suggestions/>
     </div>
   )
 }

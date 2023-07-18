@@ -1,27 +1,34 @@
 import React from 'react'
-import {logo} from '../../assets'
+import { avatar, logo } from '../../assets'
 import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
-  const array=["Home","Explore","Chat","Profile","Settings"];
-  const navigrate =useNavigate();
+  const array = ["Home", "Explore", "Chat","Notifications","Post", "Profile", "Settings"];
+  
+  const navigrate = useNavigate();
   return (
-    <div className='flex bg-navbar px-5 justify-between h-[70px] w-full'> 
-      <div onClick={()=>navigrate('/')} className='flex gap-4 justify-center items-center'>
-          <img className='h-full ' src={logo} alt="" />
-          <div className='flex font-bold text-[20px] justify-center items-center'>
-            Social-Media-App
-          </div>
+    <div className='flex flex-col bg-navbar px-5 gap-14 h-screen w-[25%]'>
+      <div onClick={() => navigrate('/')} className='flex gap-4 w-full h-[70px] justify-center items-center'>
+        <img className='h-full ' src={logo} alt="" />
+        <div className='flex font-bold text-[20px] justify-center items-center'>
+          Social-Media-App
+        </div>
       </div>
-      <div className='flex justify-center items-center'>
-        {array.map((item,index)=>(
-          <li key={index} className='list-none mx-5'>
-            
-              {item}
-             
-          </li>
-        ))}
+      <div className='flex w-full justify-center items-center gap-5'>
+        <div className='flex w-full gap-10 flex-col '>
+          {array.map((item, index) => (
+            <li key={index} className='list-none flex items-center  mx-5'>
+                <span className='cursor-pointer'>{item}</span>
+              
+
+            </li>
+          ))}
+
+        </div>
+        
+        
       </div>
-      <button onClick={()=>navigrate('/Auth')} >Login</button>
+
+
     </div>
   )
 }

@@ -1,3 +1,4 @@
 import logo from '../assets/logo.png';
-
-export {logo} ;
+import signin from '../assets/signin.png';
+import avatar from '../assets/avatar.png';
+export {logo,signin,avatar} ;
